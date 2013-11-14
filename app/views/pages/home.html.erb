@@ -1,2 +1,18 @@
 <h1>Singapore’s top 30 business brands on Facebook</h1>
 <p>Is your page missing from the list? <a href="/businesses/new">Click here</a> to add it</p>
+<table>
+	<tr>
+		<th>#</th>
+		<th>Name</th>
+		<th>FB Likes</th>
+		<th>Description</th>
+	</tr>
+	<% @businesses.each_with_index do |b, index| %>
+		<tr>
+			<td><%= index %></td>
+			<td><%= link_to b.name, b.fb_url %></td>
+			<td><%= link_to b.fb_likes, b.fb_url %></td>
+			<td><%= b.description %></td>
+		</tr>
+	<% end %>
+</table>

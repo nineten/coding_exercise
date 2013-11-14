@@ -4,26 +4,41 @@
 #
 #  id              :integer          not null, primary key
 #  name            :string(255)
-#  fb_url          :string(255)
+#  fb_id           :string(255)
 #  description     :string(255)
 #  submitter_name  :string(255)
 #  submitter_email :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
+#  fb_likes        :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  fb_url: MyString
-  description: MyString
-  submitter_name: MyString
-  submitter_email: MyString
+success:
+  name: "ViKi"
+  fb_url: "www.facebook.com/viki"
+  description: "Online entertainment"
+  submitter_name: "Jayden Ma"
+  submitter_email: "jayden87@gmail.com"
 
-two:
-  name: MyString
-  fb_url: MyString
-  description: MyString
-  submitter_name: MyString
-  submitter_email: MyString
+failure_empty:
+  name: ""
+  fb_url: "www.facebook.com/viki"
+  description: "Online entertainment"
+  submitter_name: "Jayden Ma"
+  submitter_email: "jayden87@gmail.com"
+
+failure_invalid_email:
+  name: "ViKi"
+  fb_url: "www.facebook.com/viki"
+  description: "Online entertainment"
+  submitter_name: "Jayden Ma"
+  submitter_email: "@gmail.com"
+
+failure_invalid_facebook:
+  name: "Jayden Ma"
+  fb_url: "www.facebook.com/jaydenma"
+  description: "Not a facebook page"
+  submitter_name: "Jayden Ma"
+  submitter_email: "jayden87@gmail.com"

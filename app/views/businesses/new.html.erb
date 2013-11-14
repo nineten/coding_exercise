@@ -1,1 +1,26 @@
 <h3>Add a new business to track</h3>
+<%= form_for @business do |f| %>
+	<fieldset>
+		<fieldset>
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</fieldset>
+		<fieldset>
+			<%= f.label :fb_url %>
+			<%= f.text_field :fb_url %>
+		</fieldset>
+		<fieldset>
+			<%= f.label :description %>
+			<%= f.text_field :description %>
+		</fieldset>
+		<fieldset>
+			<%= f.label :submitter_name %>
+			<%= f.text_field :submitter_name %>
+		</fieldset>
+		<fieldset>
+			<%= f.label :submitter_email %>
+			<%= f.text_field :submitter_email %>
+		</fieldset>
+	</fieldset>
+	<%= f.submit "Save" %>
+<% end %>
