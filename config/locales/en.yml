@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      business:
+        name: "Business name"
+        submitter_name: "Your name"
+        submitter_email: "Your email"

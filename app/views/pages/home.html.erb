@@ -9,7 +9,7 @@
 	</tr>
 	<% @businesses.each_with_index do |b, index| %>
 		<tr>
-			<td><%= index %></td>
+			<td><%= index+1 %></td>
 			<td><%= link_to b.name, b.fb_url %></td>
 			<td><%= link_to b.fb_likes, b.fb_url %></td>
 			<td><%= b.description %></td>
