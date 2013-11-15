@@ -1,26 +1,27 @@
 <h3>Add a new business to track</h3>
+<hr>
 <%= form_for @business do |f| %>
-	<fieldset>
-		<fieldset>
-			<%= f.label :name %>
+	<div class="form-horizontal">
+		<div class="control-group">
+			<%= f.label :name, :class => "control-label" %>
 			<%= f.text_field :name %>
-		</fieldset>
-		<fieldset>
-			<%= f.label :fb_url %>
+		</div>
+		<div class="control-group">
+			<%= f.label :fb_url, :class => "control-label" %>
 			<%= f.text_field :fb_url %>
-		</fieldset>
-		<fieldset>
-			<%= f.label :description %>
+		</div>
+		<div class="control-group">
+			<%= f.label :description, :class => "control-label" %>
 			<%= f.text_field :description %>
-		</fieldset>
-		<fieldset>
-			<%= f.label :submitter_name %>
+		</div>
+		<div class="control-group">
+			<%= f.label :submitter_name, :class => "control-label" %>
 			<%= f.text_field :submitter_name %>
-		</fieldset>
-		<fieldset>
-			<%= f.label :submitter_email %>
+		</div>
+		<div class="control-group">
+			<%= f.label :submitter_email, :class => "control-label" %>
 			<%= f.text_field :submitter_email %>
-		</fieldset>
-	</fieldset>
+		</div>
+	</div>
 	<%= f.submit "Save" %>
 <% end %>

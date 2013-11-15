@@ -1,3 +1,63 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin shadow($bgcolor:#666666,$distance:0,$strength:15) {
+	-moz-box-shadow: $distance+px $distance+px $strength+px $bgcolor;
+	-webkit-box-shadow: $distance+px $distance+px $strength+px $bgcolor;
+	box-shadow: $distance+px $distance+px $strength+px $bgcolor;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength="+$strength+", Direction=135, Color='"+$bgcolor+"')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=$strength, Direction=135, Color='$bgcolor');
+}
+
+.container {
+	background-color: #ddd;
+	padding: 10px;
+	@include shadow;
+}
+
+.round {
+	border-radius: 6px;
+}
+
+.table {
+	background-color: #fff;
+	th {
+		background-color: #000;
+		color: #fff;
+	}
+	tr:hover {
+		td {
+			background-color: #eee;
+		}
+	}
+}
+
+hr {
+	border: 0px;
+	border-top: 1px solid #999;
+}
+
+.form-horizontal {
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 324px;
+	.control-group {
+		padding: 0px;
+		margin-bottom: 5px;
+		.control-label {
+			display: inline;
+			width: 100px;
+			padding-right: 10px;
+		}
+			input {
+				display: inline-block;
+				margin: 0px;
+				width: 200px;
+			}
+		
+	}
+}
